@@ -1,0 +1,34 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: karpenter
+  namespace: karpenter
+spec:
+  targetNamespace: karpenter
+  interval: 5m
+  chart:
+    spec:
+      chart: karpenter
+      version: v0.19.2
+      sourceRef:
+        kind: HelmRepository
+        name: karpenter
+        namespace: karpenter
+      interval: 10m
+  values:
+    replicas: 1
+    serviceAccount:
+      create: true
+      name: "karpenter"
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::289512055556:role/demo-k8s-cilium-karpenter
+    settings:
+      aws:
+        clusterName: "demo-k8s-cilium"
+        clusterEndpoint: "https://38FF0DCDA70C42D8F589305FF132A172.gr7.eu-central-1.eks.amazonaws.com"
+        defaultInstanceProfile: "KarpenterNodeInstanceProfile-demo-k8s-cilium"
+    logLevel: info
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
