@@ -35,7 +35,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Sergey Vodwood - sergeyv@duck.com
 
-Infrastructure Stack: [https://github.com/svodwood/pulumi-eks-karpenter-flux](https://github.com/svodwood/pulumi-eks-karpenter-flux)
+Infrastructure Stack: [https://github.com/svodwood/pulumi-eks-cilium](https://github.com/svodwood/pulumi-eks-cilium)
 
 Detailed Deployment Instructions: [https://svodwood.github.io/devops-pastebin/eks-part-two-cilium-karpenter-flux/](https://svodwood.github.io/devops-pastebin/eks-part-two-cilium-karpenter-flux/)
 
