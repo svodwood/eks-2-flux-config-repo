@@ -10,6 +10,9 @@
 
   <p align="center">
     Flux Configuration Repository for Cilium EKS Demo
+    <div align="center">
+      <img src="https://raw.githubusercontent.com/cncf/artwork/master/projects/flux/horizontal/color/flux-horizontal-color.png" height=70>
+    </div>
     <br />
     <br />
     <a href="https://github.com/svodwood/eks-2-flux-config-repo/issues">Report Bug</a>
